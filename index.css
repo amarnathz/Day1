@@ -1,0 +1,17 @@
+.text {
+  text-align: center;
+}
+#mealbutton {
+  height: 50px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #33c3f0;
+  border-color: #33c3f0;
+  letter-spacing: 0.1rem;
+  border: 1px solid #bbb;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0 30px;
+}
