@@ -12,7 +12,7 @@ click1.addEventListener("click", () => {
 const createmeal = meal => {
   const ingredients = [];
 
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 1; i <= 20; i++) {
     if (meal[`strIngredient${i}`]) {
       ingredients.push(
         `${meal[`strIngredient${i}`]}   -    ${meal[`strMeasure${i}`]}       `
@@ -22,30 +22,42 @@ const createmeal = meal => {
     }
   }
   const dhtml = `
-<div> 
-<div>
-<img src="${meal.strMealThumb}" alt="MEAl IMAGE" >
+  <div class="f1">
+<div class="f"> 
+<img src="${meal.strMealThumb}"  id="img1" alt="MEAl IMAGE" >
+<div class="si">
+
 ${
   meal.strCategory
-    ? `<p><strong>Category: </strong>${meal.strCategory}</p>`
+    ? `<p ><strong id="title">Category: </strong>${meal.strCategory}</p>`
     : ""
 }
-${meal.strArea ? `<p><strong>Area: </strong>${meal.strArea}</p>` : ""}
+${
+  meal.strArea
+    ? `<p ><strong id="title">Area: </strong>${meal.strArea}</p>`
+    : ""
+}
 ${
   meal.strTags
-    ? `<p><strong>Tags: </strong> ${meal.strTags.split(",").join(", ")}</p>`
+    ? `<p ><strong id="title">Tags: </strong> ${meal.strTags
+        .split(",")
+        .join(", ")}</p>`
     : ""
 }
-<h5>Ingredients: </h5>
-  <ul>
+<h3>Ingredients: </h3>
+  <ul >
    ${ingredients.map(ingredients => `<li>${ingredients}</li>`).join("")} 
    </ul>
- </div>  
- <div >
-        <h4>${meal.strMeal}</h4>
-        <p>${meal.strInstructions}</p>
+ </div> 
+ 
+ </div>
+
+ <div  class="th">
+        <h4 id="title">${meal.strMeal}</h4>
+        <p id=" content ">${meal.strInstructions}</p>
       </div>
-</div>
+      </div>
+
 `;
   descmeal.innerHTML = dhtml;
 };
