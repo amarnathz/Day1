@@ -1,7 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+.con {
+  display: block;
+
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  margin: 30px;
+}
 .text {
   text-align: center;
 }
+
 #mealbutton {
+  align-items: center;
   height: 50px;
   display: inline-block;
   font-size: 13px;
@@ -14,4 +27,37 @@
   cursor: pointer;
   border-radius: 4px;
   padding: 0 30px;
+  justify-content: center;
+}
+.f {
+  padding: 10px;
+}
+#img1 {
+  width: 50%;
+  float: left;
+
+  border: 2px solid #fcfafa;
+}
+.si {
+  margin-left: 60%;
+}
+ul {
+  margin-left: 40px;
+}
+.th {
+  float: left;
+  padding: 10px;
+}
+#title {
+  font-size: medium;
+  color: #4a2cf3;
+}
+#content {
+  padding: 5px;
+}
+
+.f,
+.th {
+  margin: 20px;
+  background-color: #68e2ce;
 }
