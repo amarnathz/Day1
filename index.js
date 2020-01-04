@@ -22,7 +22,7 @@ const createmeal = meal => {
     }
   }
   const dhtml = `
-  <div class="f1">
+ 
 <div class="f"> 
 <img src="${meal.strMealThumb}"  id="img1" alt="MEAl IMAGE" >
 <div class="si">
@@ -50,14 +50,23 @@ ${
    </ul>
  </div> 
  
- </div>
 
  <div  class="th">
+ <div class="videoWrapper">
+     
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}">
+        </iframe>
+      </div>        
         <h4 id="title">${meal.strMeal}</h4>
         <p id=" content ">${meal.strInstructions}</p>
+        
+        </div>
+      
+        
+  
       </div>
-      </div>
-
+     
 `;
   descmeal.innerHTML = dhtml;
 };
