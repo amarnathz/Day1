@@ -33,9 +33,11 @@
   padding: 10px;
 }
 #img1 {
-  width: 50%;
+  display: inline;
   float: left;
+  width: 40%;
 
+  position: relative;
   border: 2px solid #fcfafa;
 }
 .si {
@@ -60,4 +62,9 @@ ul {
 .th {
   margin: 20px;
   background-color: #68e2ce;
+}
+.videoWrapper {
+  float: right;
+  display: inline;
+  position: relative;
 }
